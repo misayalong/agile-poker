@@ -1,0 +1,61 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    gap: 8px;
+}
+
+.fullWidth {
+    width: 100%;
+    display: flex;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.primary:hover:not(:disabled) {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.05);
+    /* Slight brightness increase */
+}
+
+.primary:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.secondary {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.secondary:hover:not(:disabled) {
+    filter: brightness(0.95);
+}
+
+.text {
+    background-color: transparent;
+    color: var(--md-sys-color-primary);
+    padding: 0 12px;
+}
+
+.text:hover:not(:disabled) {
+    background-color: rgba(var(--md-sys-color-primary), 0.08);
+    /* Needs RGB vars ideally, but sticking to hex */
+    background-color: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+}

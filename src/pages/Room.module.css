@@ -1,0 +1,123 @@
+.container {
+    min-height: 100vh;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 16px 24px;
+    background-color: var(--md-sys-color-surface);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.roomInfo h1 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--md-sys-color-on-surface);
+}
+
+.roomInfo p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.main {
+    flex: 1;
+    padding: 16px; /* Reduced from 24px for mobile */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Mobile layout: content (voting) first, then sidebar (participants) */
+    grid-template-areas: 
+        "content"
+        "sidebar";
+    gap: 24px;
+}
+
+@media (min-width: 900px) {
+    .main {
+        padding: 24px; /* Restore larger padding for desktop */
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar content";
+    }
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.participantsList {
+    background-color: var(--md-sys-color-surface);
+    border-radius: 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    overflow: hidden;
+}
+
+.listHeader {
+    padding: 16px;
+    background-color: var(--md-sys-color-surface-variant);
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.participantItem {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.participantItem:last-child {
+    border-bottom: none;
+}
+
+.participantName {
+    font-weight: 500;
+}
+
+.statusIndicator {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.statusVoted {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}

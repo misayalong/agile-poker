@@ -1,0 +1,86 @@
+.participantsList {
+    background-color: var(--md-sys-color-surface);
+    border-radius: 12px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    overflow: hidden;
+}
+
+.listHeader {
+    padding: 16px;
+    background-color: var(--md-sys-color-surface-variant);
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.participantItem {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.participantItem:last-child {
+    border-bottom: none;
+}
+
+.participantName {
+    font-weight: 500;
+}
+
+.statusIndicator {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.statusVoted {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.participantInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.participantBadges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.roleBadge {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    font-weight: 500;
+}
+
+.spectatorBadge {
+    font-size: 12px;
+}
+
+.revealedCard {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    margin-left: 8px;
+    font-size: 12px;
+}

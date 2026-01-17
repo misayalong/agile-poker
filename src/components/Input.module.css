@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.label {
+    font-size: 12px;
+    color: var(--md-sys-color-primary);
+    font-weight: 500;
+}
+
+.input {
+    height: 56px;
+    border-radius: 4px 4px 0 0;
+    border: none;
+    border-bottom: 1px solid var(--md-sys-color-outline);
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0 16px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-bottom-color 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--md-sys-color-primary);
+}
+
+.errorInput {
+    border-bottom-color: var(--md-sys-color-error);
+}
+
+.errorText {
+    font-size: 12px;
+    color: var(--md-sys-color-error);
+    margin-top: 4px;
+}
